@@ -1,9 +1,31 @@
-import logo from './logo.svg';
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Search from "./pages/Search"
 import './App.css';
 
 function App() {
   return (
-    <h1>Hello from App.js</h1>
+    <Router>
+      <>
+      
+      
+      <Route exact path="/"component={Home} />
+      <Route exact path="/home"component={Home} />
+      <Route exact path="/search"component={Search} />
+      
+      
+      
+      
+      
+      </>
+
+
+
+
+
+
+    </Router>
   )
 }
 
