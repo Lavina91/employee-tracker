@@ -47,12 +47,12 @@ class Search extends Component {
         return (
             <div>
                 <Container style={{ minHeight: "80%" }}>
-                    <h1 className="text-center">Search for an employees</h1>
+                    <h1 className="text-center">Search for an employee</h1>
                     <SearchForm
                         handleFormSubmit={this.handleFormSubmit}
                         handleInputChange={this.handleInputChange}
                     />
-                    <SearchResults employees={this.state.employees} />
+                    <SearchResults employees={this.state.employees} search={this.state.search} />
                 </Container>
             </div>
         )

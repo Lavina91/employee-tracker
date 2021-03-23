@@ -6,10 +6,9 @@ function Home() {
         <div>
             
             <HomePic></HomePic>
-            <p className="introP">mdskfksmefmkesfmefm;lefmefmewfmkewklfmdsmfkdsfsdklesmlefmkew;fewldsofoesfojewf
-            efewfwfwfwfewfewewfewffewfwwefewjfoewjowofjowegojerwgreagjopreagjo'regoj'raegjoaregjaerjog'ajreogoaergjoreajograjopgrojeapgjoreagjoarjog
-            worapgrjowagjeg'ewjoarjpgorjwpeagjoaerjogaerjogoaerw'gjoreajgwojgjgjjoropoagorgjorea'[pgj'orjgrjea'gojrjgsarogrjgrjgra
-            go]
+            <p className="introP" style={{fontSize:"20px"}}>Having trouble keeping track of your employees, E.T is here to help. With E.T, 
+            you can click on the search link above that will take you to a page displaying all your current employees non-sensitive information such as:
+            full name, age, date of birth, cell phone and email address. You can also filter your table by the name of a certain employee.
             </p>
             
         </div>

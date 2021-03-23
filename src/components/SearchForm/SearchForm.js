@@ -13,7 +13,7 @@ function SearchForm(props) {
                     list="employees"
                     type="text"
                     className="form-control"
-                    placeholder="Type in the name of the employee to begin"
+                    placeholder="Type in the first and last name of the employee"
                     id="employee"
                 />
                 <button type="submit" onClick={props.handleFormSubmit} className="btn btn-success">
