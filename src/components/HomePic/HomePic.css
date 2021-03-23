@@ -1,0 +1,16 @@
+.homePic {
+    background-position: center;
+    width: 1200px;
+    height: 500px;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.introP {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+}
