@@ -4,7 +4,7 @@ import HomePic from "../components/HomePic/HomePic"
 function Home() {
     return (
         <div>
-            <h1 className="title">Hello from home page</h1>
+            
             <HomePic></HomePic>
             <p className="introP">mdskfksmefmkesfmefm;lefmefmewfmkewklfmdsmfkdsfsdklesmlefmkew;fewldsofoesfojewf
             efewfwfwfwfewfewewfewffewfwwefewjfoewjowofjowegojerwgreagjopreagjo'regoj'raegjoaregjaerjog'ajreogoaergjoreajograjopgrojeapgjoreagjoarjog

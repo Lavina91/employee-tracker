@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Container from "../components/Container/Container";
-import SearchForm from "../components/SearchForm/SearchForm"
+import SearchForm from "../components/SearchForm/SearchForm";
+import SearchResults from "../components/SearchResults/SearchResults"
 import API from "../utils/API"
 
 class Search extends Component {
@@ -11,16 +12,15 @@ class Search extends Component {
         dateOfBirth: "",
         gender: "",
         search: "",
-        employees: "",
-        results: []
+        employees: []
     };
 
 
-    // componentDidMount() {
-    //     API.getData()
-    //     .then(res => console.log(res))
-    //     .catch(err => console.log(err))
-    // }
+    componentDidMount() {
+        API.getData()
+        .then(res => this.setState({ employees: res.data.results}) )
+        .catch(err => console.log(err))
+    }
 
 
     handleInputChange = (event) => {
@@ -47,11 +47,12 @@ class Search extends Component {
         return (
             <div>
                 <Container style={{ minHeight: "80%" }}>
-                    <h1 className="text-center">Search for your employees</h1>
+                    <h1 className="text-center">Search for an employees</h1>
                     <SearchForm
                         handleFormSubmit={this.handleFormSubmit}
                         handleInputChange={this.handleInputChange}
                     />
+                    <SearchResults employees={this.state.employees} />
                 </Container>
             </div>
         )
