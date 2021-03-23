@@ -3,6 +3,7 @@ import { Table } from "react-bootstrap"
 import "./SearchResults.css"
 
 function SearchResults(props) {
+    console.log(props.search)
     return (
       <>
     <Table striped bordered hover>
@@ -18,7 +19,7 @@ function SearchResults(props) {
        
                 {props.employees.map(employee => (
                     <>
-                <tbody key={employee}>
+                <tbody  >
                     <tr >
                         <td>{`${employee.name.first} ${employee.name.last}`}</td>
                         <td>{employee.dob.age}</td>
@@ -27,6 +28,20 @@ function SearchResults(props) {
                         <td>{employee.email}</td>
                     </tr>
                 </ tbody>
+                    </>
+                ))}
+
+                {props.results.filter(result => result.name.first = props.search).map(filteredResult => (
+                    <>
+                        <tbody  >
+                            <tr >
+                                <td>{`${filteredResult.name.first} ${filteredResult.name.last}`}</td>
+                                <td>{filteredResult.dob.age}</td>
+                                <td>{filteredResult.dob.date}</td>
+                                <td>{filteredResult.cell}</td>
+                                <td>{filteredResult.email}</td>
+                            </tr>
+                        </ tbody>
                     </>
                 ))}
         

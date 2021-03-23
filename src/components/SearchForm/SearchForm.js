@@ -10,14 +10,16 @@ function SearchForm(props) {
                     value={props.search}
                     onChange={props.handleInputChange}
                     name="employee"
-                    list="employees"
                     type="text"
                     className="form-control"
                     placeholder="Type in the first and last name of the employee"
                     id="employee"
                 />
-                <button type="submit" onClick={props.handleFormSubmit} className="btn btn-success">
+                <button type="submit" onClick={props.handleSearchFormSubmit} className="btn btn-success">
                     Search
+        </button>
+                <button type="submit" onClick={props.handleSearchAllFormSubmit} className="btn btn-success">
+                    Search All
         </button>
             </div>
         </form>

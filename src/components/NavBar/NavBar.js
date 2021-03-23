@@ -6,14 +6,14 @@ import "./NavBar.css";
 function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg navbar-light ">
-            <Link className="navbar-brand" to="/">
+            <Link className="navbar-brand" >
                 Employee Tracker 
       </Link>
             <div>
                 <ul className="navbar-nav">
                     <li className="nav-item">
                         <Link
-                            to="/"
+                            to="/employee-tracker"
                             className={
                                 window.location.pathname === "/" || window.location.pathname === "/about"
                                     ? "nav-link active"

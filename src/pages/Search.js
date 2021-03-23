@@ -6,21 +6,17 @@ import API from "../utils/API"
 
 class Search extends Component {
     state = {
-        name: "",
-        cellPhoneNum: "",
-        email: "",
-        dateOfBirth: "",
-        gender: "",
         search: "",
-        employees: []
+        employees: [],
+        results: []
     };
 
 
-    componentDidMount() {
-        API.getData()
-        .then(res => this.setState({ employees: res.data.results}) )
-        .catch(err => console.log(err))
-    }
+    // componentDidMount() {
+    //     API.getData()
+    //     .then(res => this.setState({ employees: res.data.results}) )
+    //     .catch(err => console.log(err))
+    // }
 
 
     handleInputChange = (event) => {
@@ -28,10 +24,17 @@ class Search extends Component {
     }
 
 
-    handleFormSubmit = (event) => {
+    handleSearchFormSubmit = (event) => {
         event.preventDefault();
-        API.getData(this.state.search)
-        .then(res => console.log(res))
+        API.getData()
+        .then(res => this.setState({ results: res.data.results}))
+        .catch(err => console.log(err))
+    }
+
+    handleSearchAllFormSubmit = (event) => {
+        event.preventDefault();
+        API.getData()
+        .then(res => this.setState({ employees: res.data.results}))
         .catch(err => console.log(err))
     }
 
@@ -49,10 +52,11 @@ class Search extends Component {
                 <Container style={{ minHeight: "80%" }}>
                     <h1 className="text-center">Search for an employee</h1>
                     <SearchForm
-                        handleFormSubmit={this.handleFormSubmit}
+                        handleSearchFormSubmit={this.handleSearchFormSubmit}
+                        handleSearchAllFormSubmit={this.handleSearchAllFormSubmit}
                         handleInputChange={this.handleInputChange}
                     />
-                    <SearchResults employees={this.state.employees} search={this.state.search} />
+                    <SearchResults employees={this.state.employees} search={this.state.search} results={this.state.results}/>
                 </Container>
             </div>
         )
