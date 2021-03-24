@@ -31,7 +31,7 @@ function SearchResults(props) {
                     </>
                 ))}
 
-                {props.results.filter(result => result.name.first = props.search).map(filteredResult => (
+                {props.results.filter(result => result.name.first.includes(props.search)).map(filteredResult => (
                     <>
                         <tbody  >
                             <tr >

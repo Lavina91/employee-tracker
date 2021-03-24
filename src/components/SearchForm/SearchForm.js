@@ -15,10 +15,10 @@ function SearchForm(props) {
                     placeholder="Type in the first and last name of the employee"
                     id="employee"
                 />
-                <button type="submit" onClick={props.handleSearchFormSubmit} className="btn btn-success">
+                <button type="submit" onClick={props.handleSearchFormSubmit} className="btn btn-success searchOne">
                     Search
         </button>
-                <button type="submit" onClick={props.handleSearchAllFormSubmit} className="btn btn-success">
+                <button type="submit" onClick={props.handleSearchAllFormSubmit} className="btn btn-success searchAll">
                     Search All
         </button>
             </div>
